@@ -33,17 +33,18 @@ def get_first_prime_factor(limit)
     end
 end
 
-puts 'testing isPrime?'
-puts "10, #{isPrime?(10)}"
-puts "13, #{isPrime?(13)}"
+# puts 'testing isPrime?'
+# puts "10, #{isPrime?(10)}"
+# puts "13, #{isPrime?(13)}"
 
-puts 'testing isFactor?'
-puts "2, 6 - #{isFactor?(2, 6)}"
-puts "3, 10 - #{isFactor?(3, 10)}"
+# puts 'testing isFactor?'
+# puts "2, 6 - #{isFactor?(2, 6)}"
+# puts "3, 10 - #{isFactor?(3, 10)}"
 
-puts 'testing get_first_prime_factor'
-puts "20 - #{get_first_prime_factor(20)}"
-puts "9 - #{get_first_prime_factor(9)}"
+# puts 'testing get_first_prime_factor'
+# puts "20 - #{get_first_prime_factor(20)}"
+# puts "9 - #{get_first_prime_factor(9)}"
+# puts "600851475143 - #{get_first_prime_factor(600851475143)}"
 
 # Now that I have the first prime factor I can split my range, and continue checking for the first prime factor for the remaining numbers greater than the first prime factor
 
@@ -55,22 +56,24 @@ puts "9 - #{get_first_prime_factor(9)}"
 #         # until the number (based on limit) is prime
 #         # if the number we're checking for, say 7, is prime, then we know that that number would itself be the largest prime factor
 #         prime_factor = get_first_prime_factor(n)
+#         puts "prime factor, #{prime_factor}"
 #         prime_factors << prime_factor
 #         n = n / prime_factor
 #         # here, the until loop will keep running, only this time we reset n
-#         # if n was 90, the first prime factor would be 2, and now the until loop runs again with n equal to 45
-#         # the first prime factor of 45 is 3, so the the until loops runs with n equal to 15
-#         puts "prime factor - #{prime_factor} && n - #{n}"
+#         # if n was 90, the first prime factor would be 5, and now the until loop runs again with n equal to 18
+#         # the first prime factor of 18 is 3, so the the until loops runs with n equal to 18
+#         # puts "prime factor - #{prime_factor} && n - #{n}"
 #     end
 #     # because n is being divided every time by the prime factor, n is also going to be a prime factor (on the last iteration) so we also need to collect n after the until loop runs
-#     puts prime_factors << n
+#     prime_factors << n
 #     return prime_factors.max
 # end
 
-# puts 'testing largest_prime_factor'
-# puts "90 - #{largest_prime_factor(90)}"
-# puts "48 - #{largest_prime_factor(48)}"
-# puts "7 - #{largest_prime_factor(7)}"
+puts 'testing largest_prime_factor'
+puts "90 - #{largest_prime_factor(18)}"
+puts "48 - #{largest_prime_factor(48)}"
+puts "7 - #{largest_prime_factor(7)}"
+puts "600851475143 - #{largest_prime_factor(600851475143)}"
 
 # Could not get this to run in my terminal... my computer killed the process at almost 6 minutes in!!!
 
